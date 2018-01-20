@@ -1,5 +1,5 @@
 -- user table, username must be unique
-create table if not exists `user` (
+create table if not exists `user_user` (
     `id` int unsigned auto_increment,
     `username` varchar(255) not null,
     `password` varchar(255) not null,
