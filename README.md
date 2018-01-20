@@ -1,6 +1,6 @@
 # simple weibo
 
 ## backEnd
-开发语言：python3.5
+开发环境：python3.6.3, django2.0
 
 ## frontEnd
