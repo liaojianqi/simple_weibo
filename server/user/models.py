@@ -1,4 +1,5 @@
 from django.db import models
+from json import JSONDecoder, JSONEncoder
 
 
 class User(models.Model):
@@ -9,3 +10,9 @@ class User(models.Model):
     # def __init__(self, username, password):
     #     self.username = username
     #     self.password = password
+
+
+class Follow(models.Model, JSONDecoder, JSONEncoder):
+    from_name = models.CharField(max_length=255)
+    to_name = models.CharField(max_length=255)
+
