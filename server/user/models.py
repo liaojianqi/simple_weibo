@@ -13,6 +13,6 @@ class User(models.Model):
 
 
 class Follow(models.Model, JSONDecoder, JSONEncoder):
-    from_name = models.CharField(max_length=255)
-    to_name = models.CharField(max_length=255)
+    from_name = models.CharField(max_length=255, default='')
+    to_name = models.CharField(max_length=255, default='')
 

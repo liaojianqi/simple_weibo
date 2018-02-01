@@ -20,3 +20,14 @@ create table if not exists `user_follow` (
     index `index_to`(`to_name`),
     unique index `union_index`(`from_name`, `to_name`)
 )ENGINE InnoDB default charset=utf8;
+
+-- blog table
+create table if not exists `blog_blog` (
+    `id` int unsigned auto_increment,
+    `author` varchar(255) not null,
+    `content` varchar(1000) not null,
+    `created_at` timestamp default current_timestamp,
+    `updated_at` timestamp default now() on update now(),
+    primary key(`id`),
+    index `index_author`(`author`)
+)ENGINE InnoDB default charset=utf8;
